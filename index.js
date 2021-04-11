@@ -59,7 +59,8 @@ function draw() {
     strokeWeight(3)
     // fill(random(0, 255), random(0, 255), random(0, 255));
 
-    background(33, 33, 33, frameCount/6);
+    // background(33, 33, 33, frameCount/6);
+    background(33, 33, 33, 50);
 
     let lastPoint = [0, 0];
     for (let w = -wIncrement * 50; w < window.innerWidth; w += wIncrement) {
@@ -106,6 +107,9 @@ function draw() {
         }
     }
 
-    
+    document.getElementById("matrix").innerHTML = `
+        ${A[0][0].toPrecision(2)}, ${A[0][1].toPrecision(2)} <br>
+        ${A[1][0].toPrecision(2)}, ${A[1][1].toPrecision(2)}
+    `
     b1 += 0.001;
 }
